@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class KafkaController {
 
-    @Value("${kafka.topic.name}")
+    @Value("${kafka.topics.test-topic}")
     private String topicName;
 
     private final KafkaTemplate<String, KafkaMessage> kafkaTemplate;

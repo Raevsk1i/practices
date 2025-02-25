@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ProducerApplication
+  kafka:
+    # Перечисляем всех наших брокеров
+    bootstrap-servers: "192.168.0.108:29092,192.168.0.108:29093,192.168.0.108:29094"
+    producer:
+      # Настраиваем сериализацию сообщений
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+kafka:
+  topics:
+    test-topic: topic4
+server:
+  port: 8084
